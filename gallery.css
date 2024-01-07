@@ -1,0 +1,168 @@
+* {
+  background-color: #ffd135;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 5%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #ffd135;
+  z-index: 1;
+}
+
+.header h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  white-space: nowrap;
+  width: 50%;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.141),
+    inset 10px 10px 15px rgba(0, 0, 0, 0.116);
+}
+
+.images-container {
+  margin: 5%;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+  height: calc(100vh - 160px);
+}
+
+.images-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+
+/* ... your existing styles ... */
+
+.images {
+  display: flex;
+  margin: 10%;
+  gap: 20px;
+  border-radius: 20px;
+  animation: image 3s ease-in-out 1 forwards;
+}
+
+@keyframes image {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.images img,
+.images video {
+  width: 100%;
+  height: 250px;
+  max-width: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 10px 10px 30px black;
+  position: relative;
+  cursor: pointer;
+}
+
+/* ... your existing styles ... */
+
+.images img:hover {
+  filter: blur(5px);
+}
+
+.images video:hover {
+  filter: blur(5px);
+}
+
+.w3-modal-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.w3-modal-content video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.images img:hover {
+  filter: blur(5px);
+}
+
+.images video:hover {
+  filter: blur(5px);
+}
+
+/* ... your existing styles ... */
+
+/* ... your existing styles ... */
+
+/* ... your existing styles ... */
+
+.images img {
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.text {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.images:hover .text {
+  opacity: 1;
+}
+
+.images:hover .middle {
+  opacity: 1;
+}
+
+/* ... existing styles ... */
+
+.middle .text {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.images:hover .middle .text {
+  opacity: 1;
+}
+
+.text {
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ... existing styles ... */
+
+/* ... your existing styles ... */
+
+/* ... your existing styles ... */

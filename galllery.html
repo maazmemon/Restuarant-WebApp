@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Images and Videos Of The Sheesha Dhaba</h1>
+      </div>
+
+      <div class="images-container">
+        <div class="images">
+          <img src="dhaba1.jpg" alt="" data-src="dhaba1.jpg" data-info="" />
+          <img src="dhaba2.jpg" alt="" data-src="dhaba2.jpg" data-info="" />
+          <video
+            src="dhabav1.mp4"
+            data-src="dhabav1.mp4"
+            data-info="Video 3: Description"
+          ></video>
+        </div>
+        <div class="images">
+          <video
+            src="dhabav2.mp4"
+            data-src="dhabav2.mp4"
+            data-info="Video 4: Description"
+          ></video>
+          <img
+            src="dhaba3.jpg"
+            alt=""
+            data-src="dhaba3.jpg"
+            data-info="Video 5: Description"
+          />
+          <div class="middle"></div>
+          <img
+            src="dhaba4.jpg"
+            alt=""
+            data-src="dhaba4.jpg"
+            data-info="Video 6: Description"
+          />
+          <div class="middle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright"
+        >&times;</span
+      >
+      <div class="w3-modal-content w3-animate-zoom">
+        <img id="img01" style="width: 100%" />
+        <video id="video01" controls></video>
+        <div id="videoInfo"></div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".images img, .images video");
+
+        images.forEach(function (image) {
+          image.addEventListener("click", function () {
+            var imgSrc = image.getAttribute("data-src");
+            var videoInfo = image.getAttribute("data-info");
+
+            if (imgSrc.endsWith(".mp4")) {
+              document.getElementById("img01").style.display = "none";
+              document.getElementById("video01").style.display = "block";
+              document.getElementById("video01").src = imgSrc;
+            } else {
+              document.getElementById("img01").style.display = "block";
+              document.getElementById("video01").style.display = "none";
+              document.getElementById("img01").src = imgSrc;
+            }
+
+            document.getElementById("modal01").style.display = "block";
+            document.getElementById("videoInfo").innerText = videoInfo;
+            document.getElementById("videoInfo").style.display = "block";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
