@@ -233,13 +233,14 @@ body {
   display: none;
 }
 
-@media (min-width: 350px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 700px) {
   body {
     overflow: hidden;
   }
 
   .header {
     margin-right: -83%;
+    width: 80%;
   }
 
   .logo-img {
@@ -247,7 +248,7 @@ body {
   }
 
   .header h2 {
-    white-space: nowrap;
+    white-space: wrap;
   }
 
   .social-media {
@@ -265,10 +266,11 @@ body {
 
   .food {
     transform: rotate(270deg);
-    margin-top: 99%;
+    margin-top: 75%;
     margin-left: -15%;
     border-end-start-radius: 0;
     border-top-left-radius: 100%;
+    width: 1000px;
   }
 
   .menu-line img {
@@ -283,6 +285,7 @@ body {
   .menu-line button {
     transform: rotate(90deg);
     margin: auto 0;
+    margin-right: 20px;
   }
 
   .cloche img {
@@ -304,8 +307,8 @@ body {
   }
   .buttons {
     align-items: center;
-    margin: 50%;
-    margin-top: 100%;
+    margin: 60% 0 0 0;
+    /* margin-top: 100%; */
   }
 
   .buttons button {
