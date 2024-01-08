@@ -236,11 +236,13 @@ body {
 @media (min-width: 320px) and (max-width: 700px) {
   body {
     overflow: hidden;
+    position: relative;
   }
 
   .header {
     margin-right: -83%;
     width: 80%;
+    position: fixed;
   }
 
   .logo-img {
@@ -307,7 +309,7 @@ body {
   }
   .buttons {
     align-items: center;
-    margin: 60% 0 0 0;
+    margin: 40% 0 0 0;
     /* margin-top: 100%; */
   }
 
